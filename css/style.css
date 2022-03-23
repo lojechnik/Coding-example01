@@ -8,7 +8,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -21,7 +20,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  height: 120vh;
   width: 100%;
 }
 
@@ -62,32 +60,64 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   background-color: #0e1a35;
   z-index: 2;
-  width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 1%;
+}
+
+.header__logo {
+  width: 11.65vw;
+  height: 3.25vw;
+}
+
+.header-hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.header-hamburger__bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 
 .header-menu {
-  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header-menu__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style: none;
 }
 
 .header-menu__link {
   color: white;
   text-decoration: none;
+  padding: 10px;
+  -webkit-transition: 0,7s ease;
+  transition: 0,7s ease;
+}
+
+.header-menu__link:hover {
+  color: dodgerblue;
+}
+
+.header-menu__btn {
+  color: #224494;
+  border: 1px solid #224494;
+  padding: 10px 30px;
+  border-radius: 200px;
 }
 
 .about-item {
@@ -142,7 +172,6 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  position: relative;
   z-index: 0;
 }
 
@@ -153,14 +182,8 @@ body {
   border-radius: 130px;
 }
 
-.main__slogan {
-  font-size: 60px;
-  font-weight: 100;
-  color: white;
-  line-height: 0.24;
-  text-align: center;
-  z-index: 1;
-  padding-top: 5%;
+.main__slogan1 {
+  padding-top: 40px;
 }
 
 .main__slogan2 {
@@ -168,10 +191,25 @@ body {
   color: #8492af;
 }
 
+.slogan1 {
+  font-size: clamp(40px, 3vw, 70px);
+  line-height: 1;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
 .menu__btn {
   color: #224494;
   border: 1px solid #224494;
   padding: 10px 35px;
+}
+
+.app-screenshot {
+  position: absolute;
+  width: 51.2vw;
+  text-align: center;
 }
 
 .wrapper {
@@ -184,9 +222,69 @@ body {
           flex-direction: column;
 }
 
-.header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
+.about-availibility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.availibility-textblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.textblock__slogan {
+  color: black;
+  line-height: 1;
+}
+
+.screenshot1 {
+  width: 65.3vw;
+  height: 33.35vw;
+}
+
+@media (max-width: 768px) {
+  .header-hamburger {
+    display: block;
+  }
+  .header-hamburger.active .header-hamburger__bar:nth-child(2) {
+    opacity: 0;
+  }
+  .header-hamburger.active .header-hamburger__bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .header-hamburger.active .header-hamburger__bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+  .header-menu__ul {
+    position: fixed;
+    left: -100%;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #224494;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .header-menu__ul__link {
+    margin: 16px 0;
+  }
+  .header-menu__ul.active {
+    left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
