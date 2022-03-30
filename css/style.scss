@@ -181,7 +181,9 @@ body {
     }
 }
 
-
+#draggable:hover{
+cursor:url(img/cursor.png)
+}
 .img-responsive {
     max-height: 10.65vw;
     max-width: 19.65vw;
