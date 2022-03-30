@@ -5,97 +5,213 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="variables" href="css/variables.css">
+    <link rel="mixin" href="css/variables.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class = "header">
+        <header class="header">
             <div class="header__logo">
                 <img src="img/01.png" alt="logo">
             </div>
             <div class="header-menu">
-                <ul class = "header-menu__ul">
-                    <li class = header-menu__item><a href="#" class="header-menu__link">Features</a></li>
-                    <li class = header-menu__item><a href="#" class="header-menu__link">Pricing</a></li>
-                    <li class = header-menu__item><a href="#" class="header-menu__link">Blog</a></li>
-                    <li class = header-menu__item><a href="#" class="header-menu__link">Contact</a></li>
-                    <li class = header-menu__item><a href="#" class="header-menu__btn header-menu__link">Login</a></li>
+                <ul class="header-menu__ul">
+                    <li class=header-menu__item><a href="#" class="header-menu__link">Features</a></li>
+                    <li class=header-menu__item><a href="#" class="header-menu__link">Pricing</a></li>
+                    <li class=header-menu__item><a href="#" class="header-menu__link">Blog</a></li>
+                    <li class=header-menu__item><a href="#" class="header-menu__link">Contact</a></li>
+                    <li class=header-menu__item><a href="#" class="header-menu__btn header-menu__link">Login</a></li>
                 </ul>
             </div>
             <div class="hamburger">
-            <span class = "hamburger__bar"></span>
-            <span class = "hamburger__bar"></span>
-            <span class = "hamburger__bar"></span>
-        </div>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+            </div>
         </header>
-        <main class = "main">
+        <main class="main">
             <span class="main__slogan1 slogan1">Grow Your buisness with Mercury</span>
             <span class="main__slogan2">Your partner in crime!</span>
             <div class="main__getstartedbtn btnround">Начать сотрудничество</div>
+            <img src="https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/06.png" alt=""
+                class="main__img">
             <div class="main__overlay">
 
-            </main>
+        </main>
+
+
+    </div>
+    <div class="about">
+        <div class="about__body">
+            <div class="about-item">
+                <img src="img/03.png" class="about-item__image">
+                <p class="about-item__title">Manage your workflow</p>
+                <span class="about-item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In explicabo
+                    inventore laboriosam amet aut quia expedita harum temporibus, similique consequuntur?
+                </span>
+                <div class="about-item__btn btnround">See more</div>
+            </div>
+            <div class="about-item">
+                <img src="img/04.png" class="about-item__image">
+                <p class="about-item__title">Analytics&Insights</p>
+                <span class="about-item__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt expedita
+                    sequi iure ex est quam nobis magni qui at nihil.
+                </span>
+                <div class="about-item__btn btnround">See more</div>
+            </div>
+            <div class="about-item">
+                <img src="img/05.png" class="about-item__image">
+                <p class="about-item__title">Organize your deadlines</p>
+                <span class="about-item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolores
+                    deleniti explicabo. Odit reprehenderit tempore maiores expedita ipsam voluptates amet!</span>
+                <div class="about-item__btn btnround">See more</div>
+            </div>
+        </div>
+        <div class="about-availibility">
+            <div class="availibility-textblock">
+                <p class="textblock__slogan slogan1">All you need is browser</p>
+                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor, inventore explicabo
+                    laudantium cupiditate omnis ipsam consequatur iure suscipit eos!</span>
+                <div class="about__advantages">
+                    <ul class="about-ul">
+                        <li class=about-ul__li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li class=about-ul__li>Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <img src="img/07.png" class="screenshot1"></img>
+        </div>
+    </div>
+    <!-- <img src = "img/06.png" class = "app-screenshot"> -->
+    <div class="dragdrop">
+
+        <div class="dragdrop__workflow">
+            <div class="dragdrop__in-progress container">
+                <div class="dragdrop-item draggable" draggable="true">
+                    <div class="dragdrop-item__left-block">
+                        <div class="dragdrop-item__letter">N</div>
+                        <div class="dragdrop-item__info">
+
+                            <div class="dragdrop-item__title">Lorem, ipsum.</div>
+                            <div class="dragdrop-item__time">
+                                <li class="dragdrop-item__li">Lorem, ipsum dolor.
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dragdrop-item__dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                <div class="dragdrop-item draggable" draggable="true">
+                    <div class="dragdrop-item__left-block">
+                        <div class="dragdrop-item__letter">N</div>
+                        <div class="dragdrop-item__info">
+
+                            <div class="dragdrop-item__title">Lorem, ipsum.</div>
+                            <div class="dragdrop-item__time">
+                                <li class="dragdrop-item__li">Lorem, ipsum dolor.
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dragdrop-item__dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                <div class="dragdrop-item draggable" draggable="true">
+                    <div class="dragdrop-item__left-block">
+                        <div class="dragdrop-item__letter">N</div>
+                        <div class="dragdrop-item__info">
+
+                            <div class="dragdrop-item__title">Lorem, ipsum.</div>
+                            <div class="dragdrop-item__time">
+                                <li class="dragdrop-item__li">Lorem, ipsum dolor.
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dragdrop-item__dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dragdrop__completed container">
+                <div class="dragdrop-item draggable" draggable="true">
+                    <div class="dragdrop-item__left-block">
+                        <div class="dragdrop-item__letter">N</div>
+                        <div class="dragdrop-item__info">
+
+                            <div class="dragdrop-item__title">Lorem, ipsum.</div>
+                            <div class="dragdrop-item__time">
+                                <li class="dragdrop-item__li">Lorem, ipsum dolor.
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dragdrop-item__dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                 <div class="dragdrop-item draggable" draggable="true">
+                    <div class="dragdrop-item__left-block">
+                        <div class="dragdrop-item__letter">N</div>
+                        <div class="dragdrop-item__info">
+
+                            <div class="dragdrop-item__title">Lorem, ipsum dolor.</div>
+                            <div class="dragdrop-item__time">
+                                <li class="dragdrop-item__li">Lorem, ipsum dolor.
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dragdrop-item__dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                <div class="dragdrop-drop-here">
+                
+                </div>
+
+            </div>
+
+
+
 
 
         </div>
-        <div class="about">
-            <div class="about__body">
-                <div class="about-item">
-                    <img src="img/03.png" class="about-item__image">
-                    <p class="about-item__title">Manage your workflow</p>
-                    <span class="about-item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In explicabo inventore laboriosam amet aut quia expedita harum temporibus, similique consequuntur?
-                    </span>
-                    <div class="about-item__btn btnround">See more</div>
-                </div>
-                <div class="about-item">
-                    <img src="img/04.png" class="about-item__image">
-                    <p class="about-item__title">Analytics&Insights</p>
-                    <span class="about-item__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt expedita sequi iure ex est quam nobis magni qui at nihil.
-                        </span>
-                    <div class="about-item__btn btnround">See more</div>
-                </div>
-                <div class="about-item">
-                    <img src="img/05.png" class="about-item__image">
-                    <p class="about-item__title">Organize your deadlines</p>
-                    <span class="about-item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolores deleniti explicabo. Odit reprehenderit tempore maiores expedita ipsam voluptates amet!</span>
-                    <div class="about-item__btn btnround">See more</div>
-                </div>
-            </div>
-            <div class="about-availibility">
-                <div class="availibility-textblock">
-                <p class = "textblock__slogan slogan1">All you need is browser</p>
-                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor, inventore explicabo laudantium cupiditate omnis ipsam consequatur iure suscipit eos!</span>
-           <div class="about__advantages">
-               <ul class = "about__ul">
-                   <li>Lorem ipsum dolor sit amet consectetur.</li>
-                   <li>Lorem ipsum dolor sit amet consectetur.</li>
-               </ul>
-           </div>
-            </div>
-            
-             <img src = "img/07.png" class = "screenshot1"></img>
-            </div>
+        <div class="dragdrop__textblock">
+        <div class="dragdrop__slogan slogan1">
+            Lorem ipsum
         </div>
-        <!-- <img src = "img/06.png" class = "app-screenshot"> -->
-        <div class="dragdrop">
-            <div class="dragdrop__workflow">
-                <img src = "img/08.png" class = "dragdrop__img1 img-responsive">
-                <img src = "img/09.png" class = "dragdrop__img2 img-responsive">
-                <img src = "img/10.png" class = "dragdrop__img3">
-
-            </div>
-<div class="dragdrop__text">
-
+        <div class="dragdrop__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad alias nemo ipsam expedita earum culpa.</div>
+    </div>
 </div>
-        </div>
-        <div class="layoutpricing">
+    <div class="layoutpricing">
 
-        </div>
-        <footer class = "footer"></footer>
+    </div>
+    <footer class="footer"></footer>
 
-        </div>
+    </div>
     </div>
     <script src="js/script.js"></script>
 </body>

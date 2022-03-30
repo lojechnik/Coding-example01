@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+@use "variables.scss";
 body {
   margin: 0;
   font-family: "Roboto";
+  font-size: clamp(20px, 1.2vw, 24px);
 }
 
 .about__body {
@@ -23,8 +25,13 @@ body {
   width: 100%;
 }
 
-.about__body__ul {
-  list-style-image: url("15.png");
+.about-ul {
+  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/15.png");
+  font-size: clamp(20px, 1.45vw, 29px);
+}
+
+.about-ul__li {
+  color: #5584ff;
 }
 
 .btnround {
@@ -38,9 +45,13 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-image: url(img);
-  height: 100vw;
-  background-color: #0cb466;
+  background-image: url(https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/02.png), url(https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/13.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 85vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -48,19 +59,154 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.dragdrop__img1 {
-  padding-right: 30px;
+.dragdrop__in-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 2vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
 }
 
-.dragdrop__img3 {
-  z-index: 0;
-  -webkit-transform: translate(-665px, 130px);
-          transform: translate(-665px, 130px);
-  max-width: 26.6vw;
+.dragdrop__completed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+}
+
+.dragdrop__img1 {
+  padding-left: 6vw;
+}
+
+.dragdrop__img2 {
+  padding-left: 3vw;
+}
+
+.dragdrop__slogan {
+  text-align: start;
+}
+
+.dragdrop__textblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.dragdrop__info {
+  color: #8492af;
+  text-align: center;
+}
+
+.dragdrop-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: clamp(156.8px, 19.65vw, 392px);
+  height: clamp(42.6px, 5vw, 106.5px);
+  background-color: white;
+  z-index: 1;
+}
+
+.dragdrop-item__left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.dragdrop-item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.dragdrop-item__letter {
+  background: #5584ff;
+  color: white;
+  width: clamp(20px, 2vw, 40px);
+  height: clamp(20px, 2vw, 40px);
+  font-size: clamp(10px, 1vw, 20px);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* or inline-flex */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dragdrop-item__title {
+  color: black;
+  font-size: clamp(15px, 1vw, 22px);
+}
+
+.dragdrop-item__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1.7vw;
+}
+
+.dragdrop-item__li {
+  font-size: clamp(10px, 0.75vw, 15px);
+  color: grey;
 }
 
 .img-responsive {
@@ -70,7 +216,7 @@ body {
 
 .footer {
   background-color: #fff;
-  height: 10vh;
+  height: 10vw;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,8 +278,8 @@ body {
   color: white;
   text-decoration: none;
   padding: 10px;
-  -webkit-transition: 0,7s ease;
-  transition: 0,7s ease;
+  -webkit-transition: 0, 7s ease;
+  transition: 0, 7s ease;
 }
 
 .header-menu__link:hover {
@@ -168,10 +314,11 @@ body {
   border: 2px solid #e6e8ef;
   padding: 10px 65px;
   font-weight: 400;
+  margin-bottom: 15vw;
 }
 
 .about-item__image {
-  padding-top: 30px;
+  padding-top: 5vw;
 }
 
 .about-item__text {
@@ -185,7 +332,7 @@ body {
 .about-item__title {
   font-weight: bold;
   padding-top: 20px;
-  font-size: 20px;
+  font-size: clamp(20px, 1vw, 25px);
 }
 
 .main {
@@ -194,10 +341,10 @@ body {
   display: flex;
   height: 110vh;
   min-height: 300px;
+  background-image: url(https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/02.png), url(https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/13.png);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #0e1a35;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -205,6 +352,15 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   z-index: 0;
+}
+
+.main__img {
+  position: absolute;
+  top: 700px;
+  left: 500px;
+  max-width: clamp(512px, 51.2vw, 1024px);
+  -webkit-box-shadow: -19px -2px 26px 6px rgba(20, 36, 74, 0.5);
+  box-shadow: -19px -2px 26px 6px rgba(20, 36, 74, 0.5);
 }
 
 .main__getstartedbtn {
@@ -255,6 +411,7 @@ body {
 }
 
 .about-availibility {
+  padding-left: 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,6 +424,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #8492af;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -280,6 +438,13 @@ body {
 
 .screenshot1 {
   width: 65.3vw;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
@@ -340,6 +505,12 @@ body {
   }
   .screenshot1 {
     width: 100vw;
+  }
+  .dragdrop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 /*# sourceMappingURL=style.css.map */
