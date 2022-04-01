@@ -52,9 +52,9 @@ body {
     background-image: url(https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/02.png), url(https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/13.png);
     background-repeat: no-repeat;
     background-position: center;
-    height: 85vh;
+    height: 757px;
     align-items:center;
-
+    
     // ,
     width: 100%;
 
@@ -87,7 +87,8 @@ body {
         padding-left: 3vw;
     }
 &__slogan{
-    text-align:start;
+    padding-bottom: 50px;
+    color:$color-grey;
 }
 &__textblock{
     display:flex;
@@ -122,6 +123,7 @@ body {
     margin:0.5vw;
     justify-content: space-around;
     align-items:center;
+    cursor:url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/cursor.png'), auto;
     // height: 5.32vw;
     width: clamp(156.8px,19.65vw,392px);
     height: clamp(42.6px,5vw,106.5px);
@@ -180,10 +182,19 @@ body {
         color:grey;
     }
 }
-
-#draggable:hover{
-cursor:url(img/cursor.png)
+.dragdrop-drop-here{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    width: clamp(156.8px,19.65vw,392px);
+    height: clamp(42.6px,5vw,106.5px);
+    border: 1px dotted $color-grey;
+    margin:0.5vw;
+   
+    color:$color-grey;
 }
+
+
 .img-responsive {
     max-height: 10.65vw;
     max-width: 19.65vw;
@@ -210,6 +221,7 @@ cursor:url(img/cursor.png)
     &__logo {
         width: 11.65vw;
         height: 3.25vw;
+        padding-top: 10px;
     }
 
 }
@@ -311,6 +323,7 @@ cursor:url(img/cursor.png)
     &__img {
         position: absolute;
         top: 700px;
+        
         left: 500px;
         max-width: clamp(512px, 51.2vw, 1024px);
         -webkit-box-shadow: -19px -2px 26px 6px rgba(20, 36, 74, 0.5);
@@ -408,6 +421,28 @@ cursor:url(img/cursor.png)
     
  
 }
+.customize{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    &__h{
+color:black;
+    }
+    &__desc1{
+        color:$color-grey;
+        text-align:center;
+    }
+    &__img{
+        
+    }
+}
+.customize-demo{
+    display:flex;
+    align-items:center;
+    &__img{
+        
+    }
+}
 @media(max-width:768px) {
 
     .hamburger {
@@ -463,10 +498,15 @@ cursor:url(img/cursor.png)
     }
 
     .screenshot1 {
-        width: 100vw;
+        width: 95vw;
+        justify-content:left;
 
     }
     .dragdrop{
         flex-direction:column-reverse;
+    }
+    .main__img{
+        display:none;
+        visibility:hidden;
     }
 }

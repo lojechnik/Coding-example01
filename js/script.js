@@ -23,6 +23,7 @@ const containers = document.querySelectorAll('.container')
 draggables.forEach(draggable => {
   draggable.addEventListener('dragstart', () => {
     draggable.classList.add('dragging')
+    draggable.style.cursor = "url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/cursor.png'), auto";
   })
   draggable.addEventListener('dragend', () => {
     draggable.classList.remove('dragging')

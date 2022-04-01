@@ -48,7 +48,7 @@ body {
   background-image: url(https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/02.png), url(https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/13.png);
   background-repeat: no-repeat;
   background-position: center;
-  height: 85vh;
+  height: 757px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -103,7 +103,8 @@ body {
 }
 
 .dragdrop__slogan {
-  text-align: start;
+  padding-bottom: 50px;
+  color: #8492af;
 }
 
 .dragdrop__textblock {
@@ -133,6 +134,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/cursor.png"), auto;
   width: clamp(156.8px, 19.65vw, 392px);
   height: clamp(42.6px, 5vw, 106.5px);
   background-color: white;
@@ -209,6 +211,22 @@ body {
   color: grey;
 }
 
+.dragdrop-drop-here {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: clamp(156.8px, 19.65vw, 392px);
+  height: clamp(42.6px, 5vw, 106.5px);
+  border: 1px dotted #8492af;
+  margin: 0.5vw;
+  color: #8492af;
+}
+
 .img-responsive {
   max-height: 10.65vw;
   max-width: 19.65vw;
@@ -241,6 +259,7 @@ body {
 .header__logo {
   width: 11.65vw;
   height: 3.25vw;
+  padding-top: 10px;
 }
 
 .hamburger {
@@ -447,6 +466,37 @@ body {
   border-radius: 50%;
 }
 
+.customize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customize__h {
+  color: black;
+}
+
+.customize__desc1 {
+  color: #8492af;
+  text-align: center;
+}
+
+.customize-demo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -504,13 +554,20 @@ body {
             justify-content: space-between;
   }
   .screenshot1 {
-    width: 100vw;
+    width: 95vw;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
   .dragdrop {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .main__img {
+    display: none;
+    visibility: hidden;
   }
 }
 /*# sourceMappingURL=style.css.map */
