@@ -5,12 +5,15 @@ $color-darkblue:#224494;
 $color-lightblue:#5584ff;
 $min-width:280px;
 $max-width:2000px;
+$medium-size-font:clamp(14px, 0.9vw, 18px);
+
 @function clamp-item($size-at-min-width, $size-at-max-width) {
     $slope: ($size-at-max-width - $size-at-min-width) / ($max-width - $min-width);
     $y-axis-intersection: -1 * $min-width * $slope + $size-at-min-width;
     $return-value: clamp(#{$size-at-min-width}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$size-at-max-width});
     @return $return-value;
 }
+
 body {
     margin: 0;
     font-family: "Roboto";
@@ -53,8 +56,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 757px;
-    align-items:center;
-    
+    align-items: center;
+
     // ,
     width: 100%;
 
@@ -62,14 +65,14 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        
+
     }
 
     &__in-progress {
         display: flex;
         padding-right: 2vw;
         flex-direction: column;
-        justify-content:baseline;
+        justify-content: baseline;
     }
 
     &__completed {
@@ -86,22 +89,26 @@ body {
     &__img2 {
         padding-left: 3vw;
     }
-&__slogan{
-    padding-bottom: 50px;
-    color:$color-grey;
-}
-&__textblock{
-    display:flex;
-    flex-direction:column;
-  
-    justify-content:space-around;
-    
 
-}
-&__info{
-    color:$color-grey;
-    text-align: center;
-}
+    &__slogan {
+        padding-bottom: 50px;
+        color: $color-grey;
+    }
+
+    &__textblock {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+
+
+    }
+
+    &__info {
+        color: $color-grey;
+        text-align: center;
+    }
+
     // &__img3 {
     //     z-index: 0;
     //     transform: translate(-810px, 150px);
@@ -120,22 +127,23 @@ body {
 
 .dragdrop-item {
     display: flex;
-    margin:0.5vw;
+    margin: 0.5vw;
     justify-content: space-around;
-    align-items:center;
-    cursor:url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/cursor.png'), auto;
+    align-items: center;
+    cursor: url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/cursor.png'), auto;
     // height: 5.32vw;
-    width: clamp(156.8px,19.65vw,392px);
-    height: clamp(42.6px,5vw,106.5px);
+    width: clamp(156.8px, 19.65vw, 392px);
+    height: clamp(42.6px, 5vw, 106.5px);
     background-color: white;
     // padding:clamp(5px,0.5vw,10px);
     z-index: 1;
-&__left-block{
-    display:flex;
-    flex-direction:row;
-    
-    justify-content: left;
-}
+
+    &__left-block {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: left;
+    }
 
 
     &__info {
@@ -147,10 +155,10 @@ body {
 
     &__letter {
         background: $color-lightblue;
-        color:white;
-        width: clamp(20px,2vw,40px);
-        height: clamp(20px,2vw,40px);
-        font-size:clamp(10px,1vw,20px);
+        color: white;
+        width: clamp(20px, 2vw, 40px);
+        height: clamp(20px, 2vw, 40px);
+        font-size: clamp(10px, 1vw, 20px);
         border-radius: 50%;
         display: flex;
         /* or inline-flex */
@@ -160,17 +168,17 @@ body {
 
     &__title {
         color: black;
-        font-size:clamp(15px,1vw,22px);
+        font-size: clamp(15px, 1vw, 22px);
     }
 
     &__dots {
-        display:flex;
-        flex-direction:column;
-       justify-content: space-around;
-       align-items:center;
-       height:1.7vw;
-      
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 1.7vw;
+
+
     }
 
     &__time {}
@@ -178,20 +186,21 @@ body {
     &__ul {}
 
     &__li {
-        font-size:clamp(10px,0.75vw,15px);
-        color:grey;
+        font-size: clamp(10px, 0.75vw, 15px);
+        color: grey;
     }
 }
-.dragdrop-drop-here{
-    display:flex;
-    align-items:center;
+
+.dragdrop-drop-here {
+    display: flex;
+    align-items: center;
     justify-content: space-around;
-    width: clamp(156.8px,19.65vw,392px);
-    height: clamp(42.6px,5vw,106.5px);
+    width: clamp(156.8px, 19.65vw, 392px);
+    height: clamp(42.6px, 5vw, 106.5px);
     border: 1px dotted $color-grey;
-    margin:0.5vw;
-   
-    color:$color-grey;
+    margin: 0.5vw;
+
+    color: $color-grey;
 }
 
 
@@ -202,11 +211,11 @@ body {
 
 .footer {
     background-color: #fff;
-    height: 10vw;
+
     width: 100%;
     display: flex;
-    position: relative;
-    flex-direction: column;
+
+
 }
 
 .header {
@@ -302,11 +311,98 @@ body {
     &__title {
         font-weight: bold;
         padding-top: 20px;
-        font-size: clamp(20px,1vw,25px);
+        font-size: clamp(20px, 1vw, 25px);
     }
 }
 
-.layoutpricing {}
+.layout-pricing {
+    display: flex;
+    
+    flex-direction: column;
+
+
+    &__title {
+        text-align:center;
+        font-size: clamp(40px, 3vw, 70px);
+        line-height: 1;
+        color: black;
+        font-weight:120;
+        padding-bottom: 50px;
+        z-index: 1;
+    }
+
+    &__plans {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: clamp(0px, 5vw, 100px);
+        padding-right: clamp(0px, 5vw, 100px);
+        height: 70vw;
+    }
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: clamp(280px, 18vw, 360px);
+    height: clamp(370px, 21.1vw, 420px);
+    -webkit-box-shadow: -5px 0px 29px 1px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: -5px 0px 29px 1px rgba(0, 0, 0, 0.7);
+    box-shadow: -5px 0px 29px 1px rgba(0, 0, 0, 0.7);
+
+    &__name {
+        text-align: center;
+    }
+
+    &__ul {
+
+    }
+
+    &__li {
+        list-style-image:url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/18.png');
+    }
+
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:baseline;
+    &__usd {
+        font-size: clamp(54px, 3.6vw, 74px);
+       
+    }
+
+    &__cost {
+        font-size: clamp(72px, 4.8vw, 96px);
+        font-weight: bold;
+        
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__monthly {
+        color: $color-grey;
+        font-size: $medium-size-font;
+       
+    }
+}
+.ul1{
+
+}
+#ul1 li:nth-child(n+2){
+    list-style-image:url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/17.png');
+}
+#ul2 li:nth-child(n+3){
+    list-style-image:url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/17.png');
+}
+// #ul3 li:nth-child(n+4){
+//     list-style-image:url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/17.png');
+// }
 
 .main {
     display: flex;
@@ -323,7 +419,7 @@ body {
     &__img {
         position: absolute;
         top: 700px;
-        
+
         left: 500px;
         max-width: clamp(512px, 51.2vw, 1024px);
         -webkit-box-shadow: -19px -2px 26px 6px rgba(20, 36, 74, 0.5);
@@ -404,46 +500,60 @@ body {
         line-height: 1;
     }
 
-    &__text {
-
-    }
+    &__text {}
 }
 
 .screenshot1 {
     width: 65.3vw;
 
 }
-.dot{
+
+.dot {
     height: 5px;
     width: 5px;
     background-color: #bbb;
     border-radius: 50%;
-    
- 
+
+
 }
-.customize{
-    display:flex;
+
+.customize {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    &__h{
-color:black;
+
+    &__h {
+        color: black;
     }
-    &__desc1{
-        color:$color-grey;
-        text-align:center;
+
+    &__desc1 {
+        color: $color-grey;
+        text-align: center;
     }
-    &__img{
-        
-    }
+
+    &__img {}
 }
-.customize-demo{
-    display:flex;
-    align-items:center;
-    &__img{
-        
-    }
+
+.customize__demo {
+    display: flex;
+    align-items: center;
 }
+
+.customize__demo-img {
+    width: clamp(304px, 60vw, 1218px);
+}
+
 @media(max-width:768px) {
+    .layout-pricing {
+        flex-direction: column;
+        
+        height:1200px;
+        align-items: center;
+&__plans{
+    flex-direction: column;
+    justify-content: space-between;
+}
+    }
 
     .hamburger {
         display: block;
@@ -499,14 +609,16 @@ color:black;
 
     .screenshot1 {
         width: 95vw;
-        justify-content:left;
+        justify-content: left;
 
     }
-    .dragdrop{
-        flex-direction:column-reverse;
+
+    .dragdrop {
+        flex-direction: column-reverse;
     }
-    .main__img{
-        display:none;
-        visibility:hidden;
+
+    .main__img {
+        display: none;
+        visibility: hidden;
     }
 }

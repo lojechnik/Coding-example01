@@ -234,16 +234,10 @@ body {
 
 .footer {
   background-color: #fff;
-  height: 10vw;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .header {
@@ -352,6 +346,106 @@ body {
   font-weight: bold;
   padding-top: 20px;
   font-size: clamp(20px, 1vw, 25px);
+}
+
+.layout-pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.layout-pricing__title {
+  text-align: center;
+  font-size: clamp(40px, 3vw, 70px);
+  line-height: 1;
+  color: black;
+  font-weight: 120;
+  padding-bottom: 50px;
+  z-index: 1;
+}
+
+.layout-pricing__plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-left: clamp(0px, 5vw, 100px);
+  padding-right: clamp(0px, 5vw, 100px);
+  height: 70vw;
+}
+
+.plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: clamp(280px, 18vw, 360px);
+  height: clamp(370px, 21.1vw, 420px);
+  -webkit-box-shadow: -5px 0px 29px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: -5px 0px 29px 1px rgba(0, 0, 0, 0.7);
+}
+
+.plan__name {
+  text-align: center;
+}
+
+.plan__li {
+  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/18.png");
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.price__usd {
+  font-size: clamp(54px, 3.6vw, 74px);
+}
+
+.price__cost {
+  font-size: clamp(72px, 4.8vw, 96px);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.price__monthly {
+  color: #8492af;
+  font-size: clamp(14px, 0.9vw, 18px);
+}
+
+#ul1 li:nth-child(n+2) {
+  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/17.png");
+}
+
+#ul2 li:nth-child(n+3) {
+  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/17.png");
 }
 
 .main {
@@ -488,7 +582,7 @@ body {
   text-align: center;
 }
 
-.customize-demo {
+.customize__demo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,7 +591,30 @@ body {
           align-items: center;
 }
 
+.customize__demo-img {
+  width: clamp(304px, 60vw, 1218px);
+}
+
 @media (max-width: 768px) {
+  .layout-pricing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 1200px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .layout-pricing__plans {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .hamburger {
     display: block;
     padding: 15px 0 0 180px;
