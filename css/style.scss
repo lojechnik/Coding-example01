@@ -181,9 +181,8 @@ body {
 
     }
 
-    &__time {}
 
-    &__ul {}
+
 
     &__li {
         font-size: clamp(10px, 0.75vw, 15px);
@@ -400,7 +399,7 @@ body {
     }
 }
 
-.ul1 {}
+
 
 .ul1 li:nth-child(n+2) {
     list-style-image: url('https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/16.png');
@@ -442,7 +441,6 @@ body {
         font-size: clamp(20px, 1.2vw, 24px);
     }
 
-    &__overlay {}
 
     &__slogan1 {
         padding-top: 40px;
@@ -501,7 +499,7 @@ body {
         line-height: 1;
     }
 
-    &__text {}
+
 }
 
 .screenshot1 {
@@ -532,7 +530,7 @@ body {
         text-align: center;
     }
 
-    &__img {}
+
 }
 
 .customize__demo {
