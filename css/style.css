@@ -208,7 +208,7 @@ body {
 
 .dragdrop-item__li {
   font-size: clamp(10px, 0.75vw, 15px);
-  color: grey;
+  color: #8492af;
 }
 
 .dragdrop-drop-here {
@@ -232,14 +232,6 @@ body {
   max-width: 19.65vw;
 }
 
-.footer {
-  background-color: #fff;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,6 +240,9 @@ body {
   z-index: 2;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: fixed;
+  height: 85px;
+  width: 100%;
 }
 
 .header__logo {
@@ -259,6 +254,10 @@ body {
 .hamburger {
   display: none;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
 }
 
 .hamburger__bar {
@@ -269,6 +268,7 @@ body {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: white;
+  z-index: 2;
 }
 
 .header-menu {
@@ -276,6 +276,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   min-height: 70px;
+  z-index: 2;
 }
 
 .header-menu__ul {
@@ -378,9 +379,9 @@ body {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-left: clamp(0px, 5vw, 100px);
-  padding-right: clamp(0px, 5vw, 100px);
-  height: 70vw;
+  padding-left: clamp(0px, 4vw, 80px);
+  padding-right: clamp(0px, 4vw, 80px);
+  height: 25vw;
 }
 
 .plan {
@@ -393,7 +394,7 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: clamp(280px, 18vw, 360px);
+  width: clamp(310px, 18vw, 360px);
   height: clamp(370px, 21.1vw, 420px);
   -webkit-box-shadow: -5px 0px 29px 1px rgba(0, 0, 0, 0.7);
   box-shadow: -5px 0px 29px 1px rgba(0, 0, 0, 0.7);
@@ -401,10 +402,27 @@ body {
 
 .plan__name {
   text-align: center;
+  padding-top: 15px;
+}
+
+.plan__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .plan__li {
-  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/14.png");
+  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/17.png");
+  color: #8492af;
 }
 
 .price {
@@ -440,12 +458,12 @@ body {
   font-size: clamp(14px, 0.9vw, 18px);
 }
 
-#ul1 li:nth-child(n+2) {
-  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/17.png");
+.ul1 li:nth-child(n+2) {
+  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/16.png");
 }
 
-#ul2 li:nth-child(n+3) {
-  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/17.png");
+.ul2 li:nth-child(n+3) {
+  list-style-image: url("https://raw.githubusercontent.com/mylifeisgame/Coding-example01/master/img/16.png");
 }
 
 .main {
@@ -481,6 +499,7 @@ body {
   color: white;
   background-color: #5584ff;
   border-radius: 130px;
+  font-size: clamp(20px, 1.2vw, 24px);
 }
 
 .main__slogan1 {
@@ -511,16 +530,6 @@ body {
   position: absolute;
   max-width: 51.2vw;
   text-align: center;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .about-availibility {
@@ -595,13 +604,98 @@ body {
   width: clamp(304px, 60vw, 1218px);
 }
 
+.join-now {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.3;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.join-now__text {
+  width: clamp(300px, 50vw, 1000px);
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 35px;
+  color: #8492af;
+}
+
+.join-now__btn {
+  border: 1px solid white;
+  color: white;
+  background-color: #5584ff;
+  border-radius: 130px;
+  font-size: clamp(20px, 1.2vw, 24px);
+}
+
+.footer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 15px;
+  width: 100%;
+  background-color: #224494;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 70px;
+}
+
+.footer__copyright {
+  color: #8492af;
+  padding-top: 30px;
+  padding-left: 10px;
+  font-size: clamp(14px, 0.9vw, 18px);
+}
+
+.nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__link {
+  font-size: clamp(14px, 0.9vw, 18px);
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  -webkit-transition: 0, 7s ease;
+  transition: 0, 7s ease;
+}
+
+.icons {
+  min-width: 80px;
+}
+
+.icon {
+  padding: 10px;
+}
+
 @media (max-width: 768px) {
   .layout-pricing {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 1200px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -614,6 +708,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    height: 1300px;
   }
   .hamburger {
     display: block;
@@ -657,6 +752,9 @@ body {
     border: none;
     padding: none;
     border-radius: none;
+  }
+  .fixed {
+    position: fixed;
   }
   .about-availibility {
     display: -webkit-box;

@@ -9,13 +9,13 @@ const headermenu = document.querySelector(".header-menu__ul");
 const hamburger = document.querySelector(".hamburger");
 const headitem = document.querySelectorAll(".header-menu__item");
 hamburger.addEventListener("click", () => {
-   
-    hamburger.classList.toggle("active");
-    headermenu.classList.toggle("active");
+
+  hamburger.classList.toggle("active");
+  headermenu.classList.toggle("active");
 })
-document.querySelectorAll(".header-menu__item").forEach(n=> n. addEventListener("click", ()=>{
-    hamburger.classList.remove("active");
-    headermenu.classList.remove("active");
+document.querySelectorAll(".header-menu__item").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  headermenu.classList.remove("active");
 }))
 const draggables = document.querySelectorAll('.draggable')
 const containers = document.querySelectorAll('.container')
@@ -51,9 +51,20 @@ function getDragAfterElement(container, y) {
     const box = child.getBoundingClientRect()
     const offset = y - box.top - box.height / 2
     if (offset < 0 && offset > closest.offset) {
-      return { offset: offset, element: child }
+      return {
+        offset: offset,
+        element: child
+      }
     } else {
       return closest
     }
-  }, { offset: Number.NEGATIVE_INFINITY }).element
+  }, {
+    offset: Number.NEGATIVE_INFINITY
+  }).element
 }
+
+// function barsFixed () {
+//   var hamburger = document.querySelector(".hamburger");
+//   window.scrollY > 1 ? hamburger.classList != 'hamburger fixed' : hamburger.classList.add('fixed');
+// }
+// window.addEventListener("scroll", barsFixed , false);
